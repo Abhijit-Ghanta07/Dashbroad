@@ -1,9 +1,21 @@
-import { Box, Divider, List, ListItem, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Chip,
+  Divider,
+  List,
+  ListItem,
+  Stack,
+  Typography,
+} from "@mui/material";
+import ControlPointIcon from "@mui/icons-material/ControlPoint";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import React from "react";
+import { Height } from "@mui/icons-material";
 
 const Trans = () => {
   return (
-    <Box>
+    <Box sx={{ width: "100%", height: "auto" }}>
       <List>
         <ListItem>
           <Typography variant="h6">Transactions</Typography>
@@ -16,7 +28,9 @@ const Trans = () => {
             </Typography>
             <Typography variant="subtitle2">Total Transactions</Typography>
           </Stack>
-          <Box>{/* <PeopleAltIcon sx={{ fontSize: 30 }} /> */}</Box>
+          <Box>
+            <Chip icon={<AddIcon />} label="20%" color="success" />
+          </Box>
         </ListItem>
         <Divider />
         <ListItem sx={{ justifyContent: "space-between" }}>
@@ -26,7 +40,9 @@ const Trans = () => {
             </Typography>
             <Typography variant="subtitle2">Per Today</Typography>
           </Stack>
-          <Box>{/* <PeopleAltIcon sx={{ fontSize: 30 }} /> */}</Box>
+          <Box>
+            <Chip icon={<RemoveIcon />} label="10%" color="error" />
+          </Box>
         </ListItem>
         <Divider />
         <ListItem sx={{ justifyContent: "space-between" }}>
@@ -36,7 +52,9 @@ const Trans = () => {
             </Typography>
             <Typography variant="subtitle2">AVG. Transactions</Typography>
           </Stack>
-          <Box>{/* <PeopleAltIcon sx={{ fontSize: 30 }} /> */}</Box>
+          <Box>
+            <Chip icon={<RemoveIcon />} label="10%" color="info" />
+          </Box>
         </ListItem>
       </List>
     </Box>

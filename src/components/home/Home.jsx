@@ -1,8 +1,7 @@
 import { useState } from "react";
-
 import { Box, Card, Container, Grid, Typography } from "@mui/material";
 
-import { Trend, Trans, Sales } from "./index";
+import { Trend, Trans, Sales, Trans_Table, Demograph } from "./index";
 import { dashbroadCard } from "../../constants/constant";
 // scss
 import style from "./home.module.scss";
@@ -65,6 +64,14 @@ const Home = () => {
             <Card>
               <Trans />
             </Card>
+          </Grid>
+        </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs>
+            <Trans_Table />
+          </Grid>
+          <Grid item xs>
+            <Demograph />
           </Grid>
         </Grid>
       </Container>
