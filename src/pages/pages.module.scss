@@ -1,3 +1,9 @@
 .bg__gradient {
   background: linear-gradient(to left, rgb(237, 237, 187), rgb(247, 185, 202));
 }
+.home__wrapper {
+  display: flex;
+}
+.content__wrapper {
+  flex: 1;
+}

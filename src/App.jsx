@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Login, Home } from "./components/index.js";
-
+import New from "./new/New.jsx";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AuthPage = lazy(() => import("./pages/AuthPage"));
 const StaffPage = lazy(() => import("./pages/StaffPage"));
@@ -56,6 +56,8 @@ function App() {
             </Suspense>
           }
         ></Route>
+
+        <Route path="/new" element={<New />} />
       </Routes>
     </>
   );

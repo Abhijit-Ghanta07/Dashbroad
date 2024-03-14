@@ -1,0 +1,13 @@
+@import "../../sass/main.scss";
+@import "../../sass/variable.scss";
+
+.home {
+  background-color: #f8f8f8;
+}
+.card {
+  border-radius: 10px !important;
+  padding: 1.5rem 1rem;
+  &__hikes {
+    font-size: 0.8rem !important;
+  }
+}

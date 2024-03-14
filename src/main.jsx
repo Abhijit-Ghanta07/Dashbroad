@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { BrowserRouter as Router } from "react-router-dom";
 // styles
+
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 const darkTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 import "@fontsource/roboto/300.css";

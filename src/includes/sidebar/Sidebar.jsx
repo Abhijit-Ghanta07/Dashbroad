@@ -1,52 +1,28 @@
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Box,
-  Container,
-  Link,
-  Stack,
-  Typography,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import HomeIcon from "@mui/icons-material/Home";
+import { Box, Stack, Typography } from "@mui/material";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { sidebarMenu } from "../../constants/constant";
 
+// scss
+import style from "./sidebar.module.scss";
+const drawerWidth = 300;
 const Sidebar = () => {
   return (
     <>
-      <Container sx={{ bgcolor: "orange" }}>
-        <Box sx={{ p: 3 }}>
-          <Accordion sx={{ boxShadow: 0, borderRadius: 0 }}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Stack direction={"row"} gap={2}>
-                <img src="" alt="profile-img" />
-                <Box>
-                  <Typography>Nik Patel</Typography>
-                  <Typography>Admin</Typography>
-                </Box>
-              </Stack>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        </Box>
-        <Box>
-          <Accordion>
-            <AccordionSummary>This is link</AccordionSummary>
-            <AccordionDetails>thsi summary</AccordionDetails>
-          </Accordion>
-        </Box>
-      </Container>
+      <Box sx={{ width: drawerWidth }} className={style.sidebar}>
+        <Stack spacing={3} useFlexGap>
+          <Typography>Logo</Typography>
+          <Stack spacing={3} useFlexGap padding={2}>
+            {sidebarMenu.map((link, i) => {
+              return (
+                <Link key={i} to={link.path} className={style.sidebar__link}>
+                  {link.title}
+                </Link>
+              );
+            })}
+          </Stack>
+        </Stack>
+      </Box>
     </>
   );
 };

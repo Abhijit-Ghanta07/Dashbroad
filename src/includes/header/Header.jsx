@@ -1,37 +1,68 @@
 import {
   Box,
-  Container,
+  Button,
   Grid,
+  Menu,
+  MenuItem,
   Paper,
-  Stack,
   TextField,
-  Typography,
 } from "@mui/material";
-import LanguageIcon from "@mui/icons-material/Language";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
+
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Link } from "react-router-dom";
 
 //
 import style from "./header.module.scss";
+import { useState } from "react";
 const Header = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Box>
       <Paper sx={{ p: 2 }} square>
         <Grid container>
           <Grid xs item>
             {/* icon */}
-            <Link to={"/home"}>
-              <Typography>SHERYO</Typography>
+            <Link to={"/home"} className={style.link}>
+              DashBroad
             </Link>
           </Grid>
           <Grid xs item container justifyContent={"flex-end"}>
-            <Stack direction={"row"} alignItems={"center"} gap={3}>
-              <input type="text" className={style.header__input} />
-              <LanguageIcon />
-              <NotificationsNoneIcon />
-              <Brightness7Icon />
-            </Stack>
+            <TextField
+              variant="standard"
+              placeholder="Search Transactions,Customers"
+            />
+            <Box>
+              <Button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+              >
+                <AccountCircleIcon />
+              </Button>
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+              </Menu>
+            </Box>
           </Grid>
         </Grid>
       </Paper>

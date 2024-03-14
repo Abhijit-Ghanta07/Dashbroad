@@ -21,19 +21,15 @@ const DATA = [
   { name: "page B", amount: 300 },
 ];
 
-const Chart = ({ color }) => {
+const ChartGraph = ({ color }) => {
   return (
     <Box sx={{ height: 60 }}>
       <ResponsiveContainer>
         <AreaChart data={DATA}>
           <defs>
-            {/* <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-            </linearGradient> */}
             <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="rgba(0,0,0,0.7)" stopOpacity={0.5} />
-              <stop offset="95%" stopColor="#ebfff1" stopOpacity={0} />
+              <stop offset="5%" stopColor="#dafff9" stopOpacity={1} />
+              <stop offset="95%" stopColor="#fff" stopOpacity={0} />
             </linearGradient>
           </defs>
           {/* <XAxis dataKey="name" /> */}
@@ -61,4 +57,4 @@ const Chart = ({ color }) => {
   );
 };
 
-export default Chart;
+export default ChartGraph;

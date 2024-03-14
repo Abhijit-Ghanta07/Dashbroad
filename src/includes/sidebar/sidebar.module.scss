@@ -1,0 +1,13 @@
+// imports
+@import "../../sass/variable.scss";
+@import "../../sass/main.scss";
+
+.sidebar {
+  background-color: $primary;
+  padding: 1rem 1.2rem;
+  position: static;
+  &__link {
+    @include link();
+    font-weight: normal;
+  }
+}
