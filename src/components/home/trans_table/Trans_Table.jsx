@@ -24,11 +24,7 @@ const Trans_Table = () => {
             <Chip label="Process" variant="outlined" color="info" />
             <Chip label="Failed" variant="outlined" color="error" />
           </Stack>
-          <Stack
-            py={2}
-            spacing={2}
-            divider={<Divider orientation="horizontal" flexItem />}
-          >
+          <Stack divider={<Divider orientation="horizontal" flexItem />}>
             {transactions_data.map((data, index) => {
               return (
                 <Stack

@@ -42,25 +42,25 @@ export const sidebarMenu = [
 export const dashbroadCard = [
   {
     title: "Today Revenue",
-    amount: "$12000",
+    amount: "$1200",
     hike: "+ 10.27%",
     bg: "#6e8898",
   },
   {
     title: "Product Sold",
-    amount: "2000",
+    amount: "2120",
     down: "- 10.27%",
     bg: "#9fb1bc",
   },
   {
     title: "New Customers",
-    amount: "25",
+    amount: "250",
     hike: "+ 20.27%",
     bg: "#d3d0cb",
   },
   {
     title: "New Visitors",
-    amount: "$12000",
+    amount: "1230",
     down: "- 05.27%",
     bg: "#e2c044",
   },
@@ -91,7 +91,7 @@ export const transactions_data = [
   {
     id: 4,
     avatar: avatar,
-    name: "Dadid",
+    name: "David",
     country: "France",
     payment_status: "failed",
   },
@@ -101,12 +101,5 @@ export const transactions_data = [
     name: "Joy",
     country: "India",
     payment_status: "Process",
-  },
-  {
-    id: 6,
-    avatar: avatar,
-    name: "Abhijit",
-    country: "India",
-    payment_status: "paid",
   },
 ];

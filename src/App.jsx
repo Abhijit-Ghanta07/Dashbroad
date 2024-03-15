@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import { Login, Home } from "./components/index.js";
-import New from "./new/New.jsx";
+import { Login, Home, Loader, Error } from "./components/index.js";
+
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AuthPage = lazy(() => import("./pages/AuthPage"));
 const StaffPage = lazy(() => import("./pages/StaffPage"));
@@ -13,9 +13,9 @@ function App() {
     <>
       <Routes>
         <Route
-          path="/"
+          path="/auth"
           element={
-            <Suspense fallback={<div>Loading ...</div>}>
+            <Suspense fallback={<Loader />}>
               <AuthPage />
             </Suspense>
           }
@@ -23,9 +23,9 @@ function App() {
           <Route index element={<Login />} />
         </Route>
         <Route
-          path="/home"
+          path="/"
           element={
-            <Suspense fallback={<div>Loading ...</div>}>
+            <Suspense fallback={<Loader />}>
               <HomePage />
             </Suspense>
           }
@@ -35,7 +35,7 @@ function App() {
         <Route
           path="/staff"
           element={
-            <Suspense fallback={<div>Loading ...</div>}>
+            <Suspense fallback={<Loader />}>
               <StaffPage />
             </Suspense>
           }
@@ -43,7 +43,7 @@ function App() {
         <Route
           path="/student"
           element={
-            <Suspense fallback={<div>Loading ...</div>}>
+            <Suspense fallback={<Loader />}>
               <StudentPage />
             </Suspense>
           }
@@ -51,13 +51,12 @@ function App() {
         <Route
           path="/teacher"
           element={
-            <Suspense fallback={<div>Loading ...</div>}>
+            <Suspense fallback={<Loader />}>
               <TeacherPage />
             </Suspense>
           }
         ></Route>
-
-        <Route path="/new" element={<New />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </>
   );

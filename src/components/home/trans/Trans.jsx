@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Chip,
   Divider,
   List,
@@ -55,6 +56,15 @@ const Trans = () => {
           <Box>
             <Chip icon={<RemoveIcon />} label="10%" color="secondary" />
           </Box>
+        </ListItem>
+        <ListItem>
+          <Button
+            variant="contained"
+            color="success"
+            sx={{ display: "block", width: "100%" }}
+          >
+            View All
+          </Button>
         </ListItem>
       </List>
     </Box>

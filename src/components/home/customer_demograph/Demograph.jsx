@@ -41,11 +41,11 @@ function Graph(params) {
           right: "10px",
           backgroundColor: "#e2c044",
           padding: "5px",
-          borderRadius: "15px",
+          borderRadius: "25px",
           padding: "5px 10px",
         }}
       >
-        <span>Cuntries</span>
+        <span>Country</span>
       </div>
       <div
         style={{
@@ -54,7 +54,7 @@ function Graph(params) {
           right: "100px",
           backgroundColor: "#6e8898",
           padding: "5px",
-          borderRadius: "15px",
+          borderRadius: "25px",
           padding: "5px 10px",
         }}
       >

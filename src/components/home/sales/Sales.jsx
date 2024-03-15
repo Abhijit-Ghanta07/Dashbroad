@@ -24,7 +24,7 @@ function BarGraph() {
   const COLORS = ["#e2c044", "#2e5266", "#6e8898"];
 
   return (
-    <Box sx={{ width: "100%", height: "200px" }}>
+    <Box sx={{ width: "100%", height: "250px" }}>
       <ResponsiveContainer>
         <PieChart>
           <Legend

@@ -17,7 +17,7 @@ const Trend = () => {
     <Box>
       <Grid container>
         <Grid item md={4}>
-          <Typography variant="h6">Trend</Typography>
+          <Typography variant="h6">Trends</Typography>
         </Grid>
       </Grid>
       <AreaGraph />
@@ -38,13 +38,12 @@ function AreaGraph() {
   ];
   // colors:#e2c044,#2e5266,#6e8898
   return (
-    <Box sx={{ width: "100%", height: "200px" }}>
+    <Box sx={{ width: "100%", height: "250px" }}>
       <ResponsiveContainer>
         <BarChart data={DATA} barGap={1}>
           <CartesianGrid strokeDasharray="1" vertical={false} />
           <XAxis dataKey="name" axisLine={false} tickLine={false} />
           <YAxis unit={"k"} tickLine={false} axisLine={false} />
-          <Text>Trend</Text>
           <Legend
             verticalAlign="top"
             iconType="circle"
