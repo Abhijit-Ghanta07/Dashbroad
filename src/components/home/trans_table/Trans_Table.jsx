@@ -4,11 +4,12 @@ import {
   Card,
   CardContent,
   Chip,
+  Divider,
   Stack,
   Typography,
 } from "@mui/material";
 import { green } from "@mui/material/colors";
-import React from "react";
+import { transactions_data } from "../../../constants/Constant";
 
 const Trans_Table = () => {
   return (
@@ -23,15 +24,42 @@ const Trans_Table = () => {
             <Chip label="Process" variant="outlined" color="info" />
             <Chip label="Failed" variant="outlined" color="error" />
           </Stack>
-          <Stack py={2}>
-            <Stack direction={"row"} justifyContent={"space-between"}>
-              <Avatar sx={{ width: 24, height: 24, bgcolor: "green" }}>
-                M
-              </Avatar>
-              <Typography>Abhijit</Typography>
-              <Typography>America</Typography>
-              <Chip label="Paid" variant="filled" color="success" />
-            </Stack>
+          <Stack
+            py={2}
+            spacing={2}
+            divider={<Divider orientation="horizontal" flexItem />}
+          >
+            {transactions_data.map((data, index) => {
+              return (
+                <Stack
+                  direction={"row"}
+                  justifyContent={"space-between"}
+                  p={2}
+                  key={index}
+                >
+                  <Avatar
+                    sx={{ width: 24, height: 24, bgcolor: "green" }}
+                    src={data.avatar}
+                  />
+
+                  <Typography>{data.name}</Typography>
+                  <Typography>{data.country}</Typography>
+                  <Chip
+                    label={data.payment_status}
+                    variant="filled"
+                    color={(() => {
+                      if (data.payment_status == "paid") {
+                        return "success";
+                      } else if (data.payment_status == "failed") {
+                        return "error";
+                      } else {
+                        return "secondary";
+                      }
+                    })()}
+                  />
+                </Stack>
+              );
+            })}
           </Stack>
         </CardContent>
       </Card>

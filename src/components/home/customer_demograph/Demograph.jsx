@@ -18,7 +18,7 @@ const Demograph = () => {
 
 function Graph(params) {
   return (
-    <Box>
+    <Box sx={{ position: "relative" }}>
       <ComposableMap>
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
@@ -33,6 +33,33 @@ function Graph(params) {
           }
         </Geographies>
       </ComposableMap>
+      {/* Example Label */}
+      <div
+        style={{
+          position: "absolute",
+          top: "0",
+          right: "10px",
+          backgroundColor: "#e2c044",
+          padding: "5px",
+          borderRadius: "15px",
+          padding: "5px 10px",
+        }}
+      >
+        <span>Cuntries</span>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "0",
+          right: "100px",
+          backgroundColor: "#6e8898",
+          padding: "5px",
+          borderRadius: "15px",
+          padding: "5px 10px",
+        }}
+      >
+        <span>Customers</span>
+      </div>
     </Box>
   );
 }

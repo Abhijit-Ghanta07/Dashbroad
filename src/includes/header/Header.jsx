@@ -7,7 +7,7 @@ import {
   Paper,
   TextField,
 } from "@mui/material";
-
+import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Link } from "react-router-dom";
 
@@ -35,10 +35,15 @@ const Header = () => {
             </Link>
           </Grid>
           <Grid xs item container justifyContent={"flex-end"}>
-            <TextField
-              variant="standard"
-              placeholder="Search Transactions,Customers"
-            />
+            <Box className={style.header__input__box}>
+              <SearchIcon />
+              <TextField
+                variant="standard"
+                placeholder="Search Transactions,Customers"
+                className={style.header__input}
+              />
+            </Box>
+
             <Box>
               <Button
                 id="basic-button"
@@ -47,7 +52,7 @@ const Header = () => {
                 aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
               >
-                <AccountCircleIcon />
+                <AccountCircleIcon sx={{ fill: "#2e5266" }} />
               </Button>
               <Menu
                 id="basic-menu"

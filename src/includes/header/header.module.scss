@@ -2,17 +2,35 @@
 @import "../../sass/main.scss";
 
 .header__input {
-  outline: 0;
+  outline: 0 !important;
   background-color: transparent;
-  border: 1px solid #fff;
-  height: auto;
-  width: auto;
-  color: #fff;
-  padding: 0.5rem 0.2rem;
-  border-radius: 4px;
+  border: 0 !important;
+  input {
+    @extend .header__input;
+
+    &::placeholder {
+      color: #000;
+      font-size: 0.7rem;
+    }
+    &::after {
+      display: none !important;
+    }
+    &::before {
+      display: none !important;
+    }
+  }
+
+  &__box {
+    background: #f8f8f8;
+    padding: 0.2rem 0.5rem;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
 }
 .link {
   @include link();
-  font-size: 1.2rem;
-  font-family: serif;
+  font-size: 1.4rem;
+  font-weight: bold;
 }

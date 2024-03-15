@@ -4,9 +4,8 @@
 .home__wrapper {
   display: flex;
   position: relative;
-  overflow: hidden;
 }
 .content__wrapper {
   flex: 1;
-  overflow-y: scroll;
+  margin-left: 250px;
 }

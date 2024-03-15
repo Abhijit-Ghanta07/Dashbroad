@@ -40,16 +40,24 @@ function AreaGraph() {
   return (
     <Box sx={{ width: "100%", height: "200px" }}>
       <ResponsiveContainer>
-        <BarChart data={DATA}>
+        <BarChart data={DATA} barGap={1}>
           <CartesianGrid strokeDasharray="1" vertical={false} />
           <XAxis dataKey="name" axisLine={false} tickLine={false} />
           <YAxis unit={"k"} tickLine={false} axisLine={false} />
           <Text>Trend</Text>
-          <Legend verticalAlign="top" />
+          <Legend
+            verticalAlign="top"
+            iconType="circle"
+            align="right"
+            wrapperStyle={{
+              textTransform: "capitalize",
+              paddingBottom: "1rem",
+            }}
+          />
           <Label value="Trend" position="top" />
-          <Bar dataKey="new" fill="#e2c044" legendType="circle" />
-          <Bar dataKey="visit" fill="#2e5266" legendType="circle" />
-          <Bar dataKey="active" fill="#6e8898" legendType="circle" />
+          <Bar dataKey="new" fill="#e2c044" />
+          <Bar dataKey="visit" fill="#2e5266" />
+          <Bar dataKey="active" fill="#6e8898" />
         </BarChart>
       </ResponsiveContainer>
     </Box>

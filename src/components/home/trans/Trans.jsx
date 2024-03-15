@@ -29,7 +29,7 @@ const Trans = () => {
             <Typography variant="subtitle2">Total Transactions</Typography>
           </Stack>
           <Box>
-            <Chip icon={<AddIcon />} label="20%" color="success" />
+            <Chip icon={<AddIcon />} label="20%" color="primary" />
           </Box>
         </ListItem>
         <Divider />
@@ -41,7 +41,7 @@ const Trans = () => {
             <Typography variant="subtitle2">Per Today</Typography>
           </Stack>
           <Box>
-            <Chip icon={<RemoveIcon />} label="10%" color="error" />
+            <Chip icon={<RemoveIcon />} label="10%" color="secondary" />
           </Box>
         </ListItem>
         <Divider />
@@ -53,7 +53,7 @@ const Trans = () => {
             <Typography variant="subtitle2">AVG. Transactions</Typography>
           </Stack>
           <Box>
-            <Chip icon={<RemoveIcon />} label="10%" color="info" />
+            <Chip icon={<RemoveIcon />} label="10%" color="secondary" />
           </Box>
         </ListItem>
       </List>

@@ -46,6 +46,24 @@ function BarGraph() {
               <Cell key={`cell-${index}`} fill={COLORS[index]} />
             ))}
           </Pie>
+          <text
+            x="50%"
+            y="40%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            fontSize={20}
+          >
+            20.35%
+          </text>
+          <text
+            x="50%"
+            y="50%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            fontSize={20}
+          >
+            AVG
+          </text>
         </PieChart>
       </ResponsiveContainer>
     </Box>

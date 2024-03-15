@@ -3,11 +3,18 @@
 @import "../../sass/main.scss";
 
 .sidebar {
-  background-color: $primary;
+  position: fixed;
+  top: 0;
+  background-color: $info;
   padding: 1rem 1.2rem;
-  position: static;
+  bottom: 0;
   &__link {
     @include link();
-    font-weight: normal;
+    font-family: "popines";
+    font-weight: 500;
+  }
+  &__logo {
+    width: 50px;
+    height: 50px;
   }
 }

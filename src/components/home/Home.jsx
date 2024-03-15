@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Box, Card, Container, Grid, Typography } from "@mui/material";
+import { Box, Card, Container, Grid, Stack, Typography } from "@mui/material";
 
 import { Trend, Trans, Sales, Trans_Table, Demograph } from "./index";
-import { dashbroadCard } from "../../constants/constant";
+import { dashbroadCard } from "../../constants/Constant";
 // scss
 import style from "./home.module.scss";
 
@@ -16,34 +16,33 @@ const Home = () => {
             return (
               <Grid xs item key={card.title}>
                 <Card className={style.card} sx={{ background: card.bg }}>
-                  <Grid container>
-                    <Grid xs item>
-                      <Typography variant="body1">{card.title}</Typography>
-                    </Grid>
-                    <Grid xs item>
+                  <Stack>
+                    <Typography variant="button">{card.title}</Typography>
+
+                    <Stack direction={"row"} spacing={1}>
                       {/* <ChartCard color={COLORS[i + 1]} /> */}
+
+                      <Typography variant="h4">{card.amount}</Typography>
+
                       {card.hike ? (
                         <Typography
-                          sx={{ color: "green", textAlign: "end" }}
-                          variant="body2"
+                          sx={{ color: "green" }}
+                          variant="caption"
                           className={style.card__hikes}
                         >
                           {card.hike}
                         </Typography>
                       ) : (
                         <Typography
-                          variant="body2"
-                          sx={{ color: "red", textAlign: "end" }}
+                          variant="caption"
+                          sx={{ color: "red" }}
                           className={style.card__hikes}
                         >
                           {card.down}
                         </Typography>
                       )}
-                      <Typography variant="body1" sx={{ textAlign: "end" }}>
-                        {card.amount}
-                      </Typography>
-                    </Grid>
-                  </Grid>
+                    </Stack>
+                  </Stack>
                 </Card>
               </Grid>
             );
