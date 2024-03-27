@@ -40,7 +40,6 @@ function Graph(params) {
           top: "0",
           right: "10px",
           backgroundColor: "#e2c044",
-          padding: "5px",
           borderRadius: "25px",
           padding: "5px 10px",
         }}
@@ -53,7 +52,7 @@ function Graph(params) {
           top: "0",
           right: "100px",
           backgroundColor: "#6e8898",
-          padding: "5px",
+
           borderRadius: "25px",
           padding: "5px 10px",
         }}

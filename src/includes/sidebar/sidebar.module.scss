@@ -8,10 +8,23 @@
   background-color: $info;
   padding: 1rem 1.2rem;
   bottom: 0;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
   &__link {
     @include link();
     font-family: "popines";
     font-weight: 500;
+    padding: 0.4rem;
+    border-radius: 10px;
+    transition: 0.4s ease-in;
+    transition: color 0.2s ease-out;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      background-color: $primary;
+    }
   }
   &__logo {
     width: 50px;

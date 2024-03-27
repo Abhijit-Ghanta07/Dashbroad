@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Divider, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { sidebarMenu } from "../../constants/Constant";
@@ -16,16 +16,16 @@ const Sidebar = () => {
             <img src={logo} alt="logo" className={style.sidebar__logo} />
             <Typography variant="h6">NexaVerse</Typography>
           </Box>
-          <Stack spacing={3} useFlexGap mt={3}>
+          <Stack spacing={1} useFlexGap>
             {sidebarMenu.map((link, i) => {
               return (
                 <Link key={i} to={link.path} className={style.sidebar__link}>
                   <Box
                     sx={{
                       mt: "auto",
-                      paddingInlineStart: 4,
+                      paddingInlineStart: 2,
                       display: "inline-flex",
-                      gap: 1,
+                      alignItems: "center",
                     }}
                   >
                     {link.icon}
@@ -37,13 +37,15 @@ const Sidebar = () => {
               );
             })}
           </Stack>
+          <Divider sx={{ bgcolor: "#000" }} />
           <Box
             sx={{
               mt: "auto",
-              paddingInlineStart: 4,
+              paddingInlineStart: 2,
               display: "inline-flex",
-              gap: 1,
+              alignItems: "center",
             }}
+            className={style.sidebar__link}
           >
             <LogoutIcon />
             <Typography className={style.sidebar__link}>Log-Out</Typography>
