@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Box, Card, Container, Grid, Stack, Typography } from "@mui/material";
 
-import { Trend, Trans, Sales, Trans_Table, Demograph } from "./index";
+import { Trend, Trans, Sales, Trans_Table, Sales_Table } from "./index";
+
 import { dashbroadCard } from "../../constants/Constant";
 // scss
 import style from "./home.module.scss";
@@ -17,14 +18,17 @@ const Home = () => {
               <Grid xs item key={card.title}>
                 <Card className={style.card} sx={{ background: card.bg }}>
                   <Stack>
-                    <Typography variant="button">{card.title}</Typography>
+                    <Typography variant="subtitle1">{card.title}</Typography>
 
                     <Stack direction={"row"} spacing={1}>
                       {/* <ChartCard color={COLORS[i + 1]} /> */}
 
-                      <Typography variant="h4">{card.amount}</Typography>
+                      <Stack direction={"row"} alignItems={"center"}>
+                        {card.icon}
+                        <Typography variant="h5">{card.amount}</Typography>
+                      </Stack>
 
-                      {card.hike ? (
+                      {/* {card.hike ? (
                         <Typography
                           sx={{ color: "green" }}
                           variant="caption"
@@ -40,7 +44,7 @@ const Home = () => {
                         >
                           {card.down}
                         </Typography>
-                      )}
+                      )} */}
                     </Stack>
                   </Stack>
                 </Card>
@@ -66,11 +70,11 @@ const Home = () => {
           </Grid>
         </Grid>
         <Grid container spacing={2}>
-          <Grid item xs>
-            <Trans_Table />
+          <Grid item xs={8}>
+            <Sales_Table />
           </Grid>
-          <Grid item xs>
-            <Demograph />
+          <Grid item xs={4}>
+            <Trans_Table />
           </Grid>
         </Grid>
       </Container>

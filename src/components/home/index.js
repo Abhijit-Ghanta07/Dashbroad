@@ -1,7 +1,7 @@
-import Trend from "./trend/Trend";
-import Trans from "./trans/Trans";
-import Sales from "./sales/Sales";
-import Trans_Table from "./trans_table/Trans_Table";
-import Demograph from "./customer_demograph/Demograph";
+import Trend from "./graphs/Trend";
+import Trans from "./graphs/Trans";
+import Sales from "./graphs/Sales";
+import Trans_Table from "./last_trans/Trans_History";
+import Sales_Table from "./last_sales/Sales_History";
 
-export { Trend, Sales, Trans, Trans_Table, Demograph };
+export { Trend, Sales, Trans, Trans_Table, Sales_Table };

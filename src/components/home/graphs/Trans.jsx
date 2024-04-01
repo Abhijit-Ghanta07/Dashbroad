@@ -19,7 +19,7 @@ const Trans = () => {
     <Box sx={{ width: "100%", height: "auto" }}>
       <List>
         <ListItem>
-          <Typography variant="h6">Transactions</Typography>
+          <Typography variant="h6">Revenue</Typography>
         </ListItem>
         <Divider />
         <ListItem sx={{ justifyContent: "space-between" }}>

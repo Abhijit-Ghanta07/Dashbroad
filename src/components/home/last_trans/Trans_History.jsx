@@ -1,30 +1,53 @@
 import {
   Avatar,
   Box,
+  Button,
   Card,
   CardContent,
   Chip,
   Divider,
   Stack,
+  Table,
+  TableContainer,
+  TableHead,
+  TableRow,
   Typography,
 } from "@mui/material";
-import { green } from "@mui/material/colors";
-import { transactions_data } from "../../../constants/Constant";
+import { deepOrange, green } from "@mui/material/colors";
+import { trans_history } from "../../../constants/Constant";
 
 const Trans_Table = () => {
   return (
     <Box>
       <Card>
         <CardContent>
-          <Typography variant="h6">Last Transactions</Typography>
-
-          <Stack direction={"row"} gap={2} py={2}>
-            <Chip label="All" variant="filled" color="primary" />
-            <Chip label="Success" variant="outlined" color="success" />
-            <Chip label="Process" variant="outlined" color="info" />
-            <Chip label="Failed" variant="outlined" color="error" />
+          <Stack direction={"row"} justifyContent={"space-between"}>
+            <Typography variant="h6">Last Transactions</Typography>
+            <Button variant="contained" color="success">
+              Next
+            </Button>
           </Stack>
-          <Stack divider={<Divider orientation="horizontal" flexItem />}>
+
+          <Stack gap={2} useFlexGap py={2}>
+            {trans_history.map((row) => {
+              return (
+                <Stack
+                  key={row.id}
+                  direction={"row"}
+                  gap={2}
+                  alignItems={"center"}
+                >
+                  <Avatar variant="rounded" sx={{ bgcolor: green[400] }}>
+                    {row.icon}
+                  </Avatar>
+                  <Typography>{row.name}</Typography>
+                  <Typography>{row.time}</Typography>
+                  <Typography>{row.amount}</Typography>
+                </Stack>
+              );
+            })}
+          </Stack>
+          {/* <Stack divider={<Divider orientation="horizontal" flexItem />}>
             {transactions_data.map((data, index) => {
               return (
                 <Stack
@@ -56,7 +79,7 @@ const Trans_Table = () => {
                 </Stack>
               );
             })}
-          </Stack>
+          </Stack> */}
         </CardContent>
       </Card>
     </Box>

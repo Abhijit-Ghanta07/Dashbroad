@@ -1,12 +1,18 @@
 @import "../../sass/variable.scss";
 @import "../../sass/main.scss";
-
+.header__con {
+  position: sticky;
+  top: 0;
+  background-color: $light !important;
+  z-index: 9;
+}
 .header__input {
   outline: 0 !important;
   background-color: transparent;
   border: 0 !important;
   input {
     @extend .header__input;
+    padding: 0.3rem;
 
     &::placeholder {
       color: #000;
@@ -31,6 +37,6 @@
 }
 .link {
   @include link();
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
