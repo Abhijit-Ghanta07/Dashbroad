@@ -19,15 +19,23 @@ const Trans = () => {
     <Box sx={{ width: "100%", height: "auto" }}>
       <List>
         <ListItem>
-          <Typography variant="h6">Revenue</Typography>
+          <Typography variant="h6" sx={{ fontFamily: "russo" }}>
+            Revenue
+          </Typography>
         </ListItem>
         <Divider />
         <ListItem sx={{ justifyContent: "space-between" }}>
           <Stack>
-            <Typography variant="h6" component={"p"}>
+            <Typography
+              variant="h6"
+              component={"p"}
+              sx={{ fontFamily: "russo" }}
+            >
               121,000
             </Typography>
-            <Typography variant="subtitle2">Total Transactions</Typography>
+            <Typography variant="subtitle2" sx={{ fontFamily: "fountain" }}>
+              Total Transactions
+            </Typography>
           </Stack>
           <Box>
             <Chip icon={<AddIcon />} label="20%" color="primary" />
@@ -36,10 +44,16 @@ const Trans = () => {
         <Divider />
         <ListItem sx={{ justifyContent: "space-between" }}>
           <Stack>
-            <Typography variant="h6" component={"p"}>
+            <Typography
+              variant="h6"
+              component={"p"}
+              sx={{ fontFamily: "russo" }}
+            >
               21,000
             </Typography>
-            <Typography variant="subtitle2">Per Today</Typography>
+            <Typography variant="subtitle2" sx={{ fontFamily: "fountain" }}>
+              Per Today
+            </Typography>
           </Stack>
           <Box>
             <Chip icon={<RemoveIcon />} label="10%" color="secondary" />
@@ -48,10 +62,16 @@ const Trans = () => {
         <Divider />
         <ListItem sx={{ justifyContent: "space-between" }}>
           <Stack>
-            <Typography variant="h6" component={"p"}>
+            <Typography
+              variant="h6"
+              component={"p"}
+              sx={{ fontFamily: "russo" }}
+            >
               $21.50
             </Typography>
-            <Typography variant="subtitle2">AVG. Transactions</Typography>
+            <Typography variant="subtitle2" sx={{ fontFamily: "fountain" }}>
+              AVG. Transactions
+            </Typography>
           </Stack>
           <Box>
             <Chip icon={<RemoveIcon />} label="10%" color="secondary" />
@@ -61,7 +81,7 @@ const Trans = () => {
           <Button
             variant="contained"
             color="success"
-            sx={{ display: "block", width: "100%" }}
+            sx={{ display: "block", width: "100%", fontFamily: "flick" }}
           >
             View All
           </Button>

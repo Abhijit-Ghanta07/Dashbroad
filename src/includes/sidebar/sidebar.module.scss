@@ -14,7 +14,7 @@
   }
   &__link {
     @include link();
-    font-family: "popines";
+    font-family: "russo" !important;
     font-weight: 500;
     padding: 0.3rem;
     border-radius: 10px;

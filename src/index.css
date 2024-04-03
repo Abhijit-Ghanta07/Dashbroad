@@ -12,7 +12,19 @@
 }
 @font-face {
   font-family: "popines";
-  src: url("./assets/fonts/Poppins-Black.ttf");
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "flick";
+  src: url("./assets/fonts/flick-lg.ttf");
+}
+@font-face {
+  font-family: "fountain";
+  src: url("./assets/fonts/fountain.ttf");
+}
+@font-face {
+  font-family: "russo";
+  src: url("./assets/fonts/russo.ttf");
 }
 /* a {
   font-weight: 500;

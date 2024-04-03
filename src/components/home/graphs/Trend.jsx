@@ -17,7 +17,9 @@ const Trend = () => {
     <Box>
       <Grid container>
         <Grid item md={4}>
-          <Typography variant="h6">Trends</Typography>
+          <Typography variant="h6" sx={{ fontFamily: "russo" }}>
+            Trends
+          </Typography>
         </Grid>
       </Grid>
       <AreaGraph />
@@ -51,6 +53,7 @@ function AreaGraph() {
             wrapperStyle={{
               textTransform: "capitalize",
               paddingBottom: "1rem",
+              fontSize: ".8rem",
             }}
           />
           <Label value="Trend" position="top" />

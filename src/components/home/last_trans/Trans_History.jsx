@@ -22,7 +22,9 @@ const Trans_Table = () => {
       <Card>
         <CardContent>
           <Stack direction={"row"} justifyContent={"space-between"}>
-            <Typography variant="h6">Last Transactions</Typography>
+            <Typography variant="h6" sx={{ fontFamily: "russo" }}>
+              Last Transactions
+            </Typography>
             <Button variant="contained" color="success">
               Next
             </Button>
@@ -40,9 +42,15 @@ const Trans_Table = () => {
                   <Avatar variant="rounded" sx={{ bgcolor: green[400] }}>
                     {row.icon}
                   </Avatar>
-                  <Typography>{row.name}</Typography>
-                  <Typography>{row.time}</Typography>
-                  <Typography>{row.amount}</Typography>
+                  <Typography sx={{ fontFamily: "russo" }}>
+                    {row.name}
+                  </Typography>
+                  <Typography sx={{ fontFamily: "flick" }}>
+                    {row.time}
+                  </Typography>
+                  <Typography sx={{ fontFamily: "russo" }}>
+                    {row.amount}
+                  </Typography>
                 </Stack>
               );
             })}

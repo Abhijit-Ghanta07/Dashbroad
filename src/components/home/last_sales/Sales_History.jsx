@@ -22,10 +22,12 @@ const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 const Demograph = () => {
   return (
     <Box>
-      <Card>
+      <Card sx={{ fontFamily: "russo" }}>
         <CardContent>
           <Stack direction={"row"} justifyContent={"space-between"}>
-            <Typography variant="h6">Last Sales</Typography>
+            <Typography variant="h6" sx={{ fontFamily: "russo" }}>
+              Last Sales
+            </Typography>
             <Button variant="contained" color="success">
               Next
             </Button>
@@ -35,18 +37,18 @@ const Demograph = () => {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Product</TableCell>
-                  <TableCell>Status</TableCell>
-                  <TableCell>Price</TableCell>
-                  <TableCell>Amount</TableCell>
-                  <TableCell>Date</TableCell>
+                  <TableCell sx={{ fontFamily: "russo" }}>Product</TableCell>
+                  <TableCell sx={{ fontFamily: "russo" }}>Status</TableCell>
+                  <TableCell sx={{ fontFamily: "russo" }}>Price</TableCell>
+                  <TableCell sx={{ fontFamily: "russo" }}>Amount</TableCell>
+                  <TableCell sx={{ fontFamily: "russo" }}>Date</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 {sales_history.map((row) => {
                   return (
                     <TableRow key={row.id}>
-                      <TableCell>
+                      <TableCell sx={{ fontFamily: "russo" }}>
                         <Stack direction={"row"} gap={2} useFlexGap>
                           <Avatar
                             src={row.img}
@@ -62,11 +64,18 @@ const Demograph = () => {
                           variant="filled"
                           color="success"
                           label={row.status}
+                          sx={{ fontFamily: "russo" }}
                         />
                       </TableCell>
-                      <TableCell>{row.price}</TableCell>
-                      <TableCell>{row.amount}</TableCell>
-                      <TableCell>{row.date}</TableCell>
+                      <TableCell sx={{ fontFamily: "russo" }}>
+                        {row.price}
+                      </TableCell>
+                      <TableCell sx={{ fontFamily: "russo" }}>
+                        {row.amount}
+                      </TableCell>
+                      <TableCell sx={{ fontFamily: "flick" }}>
+                        {row.date}
+                      </TableCell>
                     </TableRow>
                   );
                 })}

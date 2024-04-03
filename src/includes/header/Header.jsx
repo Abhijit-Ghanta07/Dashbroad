@@ -83,7 +83,10 @@ const Header = () => {
                   alt="user img"
                   sx={{ width: "25px", height: "25px" }}
                 />
-                <Typography variant="subtitle2" sx={{ mx: 1 }}>
+                <Typography
+                  variant="subtitle2"
+                  sx={{ mt: 1, fontFamily: "russo" }}
+                >
                   {user.name}
                 </Typography>
               </Button>
@@ -96,9 +99,15 @@ const Header = () => {
                   "aria-labelledby": "basic-button",
                 }}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleClose} sx={{ fontFamily: "russo" }}>
+                  Profile
+                </MenuItem>
+                <MenuItem onClick={handleClose} sx={{ fontFamily: "russo" }}>
+                  My account
+                </MenuItem>
+                <MenuItem onClick={handleClose} sx={{ fontFamily: "russo" }}>
+                  Logout
+                </MenuItem>
               </Menu>
             </Box>
           </Grid>

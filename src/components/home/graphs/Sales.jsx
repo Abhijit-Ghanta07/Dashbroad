@@ -7,7 +7,9 @@ const Sales = () => {
     <Box>
       <Grid container>
         <Grid item md={4}>
-          <Typography variant="h6">Sales</Typography>
+          <Typography variant="h6" sx={{ fontFamily: "russo" }}>
+            Sales
+          </Typography>
         </Grid>
       </Grid>
       <BarGraph />

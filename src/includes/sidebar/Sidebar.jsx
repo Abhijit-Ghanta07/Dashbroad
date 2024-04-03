@@ -14,7 +14,9 @@ const Sidebar = () => {
         <Stack spacing={3} useFlexGap sx={{ height: "100%" }}>
           <Box sx={{ textAlign: "center" }}>
             <img src={logo} alt="logo" className={style.sidebar__logo} />
-            <Typography variant="subtitle1">NexaVerse</Typography>
+            <Typography variant="subtitle1" sx={{ fontFamily: "flick" }}>
+              NexaVerse
+            </Typography>
           </Box>
           <Stack spacing={2} useFlexGap>
             {sidebarMenu.map((link, i) => {
@@ -48,7 +50,9 @@ const Sidebar = () => {
             className={style.sidebar__link}
           >
             <LogoutIcon />
-            <Typography sx={{ padding: ".3rem" }}>Log-Out</Typography>
+            <Typography sx={{ padding: ".3rem", fontFamily: "russo" }}>
+              Log-Out
+            </Typography>
           </Box>
         </Stack>
       </Box>

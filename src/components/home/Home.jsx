@@ -18,14 +18,21 @@ const Home = () => {
               <Grid xs item key={card.title}>
                 <Card className={style.card} sx={{ background: card.bg }}>
                   <Stack>
-                    <Typography variant="subtitle1">{card.title}</Typography>
+                    <Typography
+                      variant="subtitle1"
+                      sx={{ fontFamily: "russo" }}
+                    >
+                      {card.title}
+                    </Typography>
 
                     <Stack direction={"row"} spacing={1}>
                       {/* <ChartCard color={COLORS[i + 1]} /> */}
 
                       <Stack direction={"row"} alignItems={"center"}>
                         {card.icon}
-                        <Typography variant="h5">{card.amount}</Typography>
+                        <Typography variant="h5" sx={{ fontFamily: "russo" }}>
+                          {card.amount}
+                        </Typography>
                       </Stack>
 
                       {/* {card.hike ? (
