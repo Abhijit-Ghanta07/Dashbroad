@@ -1,8 +1,6 @@
 import { Box, Divider, Stack, Typography } from "@mui/material";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { sidebarMenu } from "../../constants/Constant";
-import logo from "../../assets/logos/logo-hand.png";
 import LogoutIcon from "@mui/icons-material/Logout";
 // scss
 import style from "./sidebar.module.scss";
@@ -13,7 +11,11 @@ const Sidebar = () => {
       <Box sx={{ width: drawerWidth }} className={style.sidebar}>
         <Stack spacing={3} useFlexGap sx={{ height: "100%" }}>
           <Box sx={{ textAlign: "center" }}>
-            <img src={logo} alt="logo" className={style.sidebar__logo} />
+            <img
+              src="/logos/logo-hand.png"
+              alt="logo"
+              className={style.sidebar__logo}
+            />
             <Typography variant="subtitle1" sx={{ fontFamily: "flick" }}>
               NexaVerse
             </Typography>

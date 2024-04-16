@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { BrowserRouter as Router } from "react-router-dom";
 // styles
 import "./index.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -29,10 +28,8 @@ const darkTheme = createTheme({
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Router>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
-  </Router>
+  <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
+    <App />
+  </ThemeProvider>
 );
